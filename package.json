@@ -1,0 +1,27 @@
+{
+  "name": "chronicle-portfolio",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npm run dev --workspace=@workspace/chronicle-portfolio",
+    "build": "npm run build --workspace=@workspace/chronicle-portfolio",
+    "typecheck": "npm run typecheck --workspace=@workspace/chronicle-portfolio",
+    "lint": "npm run typecheck"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.0",
+    "typescript": "~5.7.0"
+  },
+  "dependencies": {
+    "@types/three": "^0.186.0",
+    "three": "^0.186.1"
+  }
+}
